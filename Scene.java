@@ -1,4 +1,3 @@
-package project;
 
 import java.awt.*;
 
@@ -143,6 +142,7 @@ public class Scene {
 			System.out.println(
 					"If you studied earlier you get the question right automatically, \nif not pick a number between 0 and 4 and hope you're right");
 			if (HasStudied == true) {
+				System.out.println("You got it right!");
 				Counter.WellbeingUp();
 			}
 			int SectionGuess = console.nextInt();
@@ -160,6 +160,7 @@ public class Scene {
 			System.out.println(
 					"Now you have to answer two questions because you talk too much, \nIf you studied earlier you get the question right automatically, \nif not pick two numbers between 0 and 4 and hope you're right");
 			if (HasStudied == true) {
+				System.out.println("You got them both right!");
 				Counter.Wellbeing2Up();
 				System.out.println("Too smart for your own good\n");
 			} else {
@@ -240,24 +241,11 @@ public class Scene {
 				System.out.println("You got this!");
 			}
 				
-		
-
 	}
 
 	public static void Nighttime() {
 		System.out.println();
 
 	}
-		public static void goodNight() {
- +		System.out.println("You walk back, dazed and confused, to your room. You collapse on your bed, having made it through a completely ordinary day. Good Night!");
- +		if (Counter.getHunger() <= 0){
- +		Counter.showWellbeing();
- +		}
- +		else {
- +			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it during the day. Thus, you have lost the most important battle.")
- +		}
- +		
- +	}
 
 }
-
