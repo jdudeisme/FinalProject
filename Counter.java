@@ -1,3 +1,4 @@
+package project;
 
 public class Counter {
 	public static int wellbeing = 0;
@@ -19,8 +20,10 @@ public static void WellbeingUp(){
 
 public static void WellbeingDown(){
 	wellbeing--;
+	terminationClause();
 	
 	System.out.println("Oops, Your well being is currently at " + wellbeing + ", bad move.");
+	
 	if (wellbeing == -2){
 		System.out.println("Be careful, your state of wellbeing is dangerously close to -3");
 	}
