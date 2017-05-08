@@ -1,15 +1,22 @@
 
-package project;
 
 public class PlayGame {
+	public boolean HasStudied;
+	
+	
 	public static void main(String[] args){
-		Welcome();
 		
+		Welcome();
+		Scene.Morning();
+		Scene.CS112();
+		Scene.Lunch();
+		
+	
 	}
 	
 	public static void Welcome(){
 		
-		System.out.println("Welcome to the Game of Swagger with J-Lo Suave");
-		Scene.Morning();
+		System.out.println("Welcome to the Game of Life with J-Lo Suave");
+			
 	}
 }
