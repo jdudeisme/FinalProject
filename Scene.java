@@ -1,3 +1,4 @@
+package project;
 import java.awt.*;
 
 import java.util.Scanner;
@@ -73,10 +74,9 @@ public static void Lunch(){
 	else if(LunchAnswer == 2){
 		System.out.println("You head to Durfees spend your eight dollars efficiently and get some studying in for section later rather than getting caught in conversation in a big dining hall.");
 		Counter.HungerDown();
-		HasStudied = true;
-		
+		HasStudied = true;	
 	}
-	else 
+	else {
 		System.out.println("You head to your personal residential college, but the food today is awful. You can either choose to eat and damage your wellbeing(1), or not eat and go hungry(2)");
 		int ResColAnswer = console.nextInt();
 			if (ResColAnswer == 1 ){
@@ -86,14 +86,31 @@ public static void Lunch(){
 			else {
 				System.out.println("Not eating is a pretty bold move");
 			}
-			console.close();
+	}			
 	}
 	
-	
-
-public void Study(){
-	
-	
+public static void Study(){
+	Scanner console = new Scanner(System.in);
+	System.out.println("You finished your meal and decide that it is time to get some dedicated studying done, but where do you go?  Sterling Memorial Library(1), Your suite(2), Cross Campus(3)." );
+	int StudyAnswer = console.nextInt();
+		if (StudyAnswer == 1){
+			System.out.println("A trip to the good-old-fashioned library" );
+				if (HasStudied == true){
+					System.out.println("Nerd! you study so often, but you know it's good for you. You feel even less anxious about your classes.");
+					Counter.WellbeingUp();
+				}
+				else{
+					HasStudied = true;
+				}
+		 if (StudyAnswer == 2){
+			  System.out.println("You decide to go to your suite, but you're suitemates are playing 3-player super smash brothers, and you can't help but be their 4th player.");
+			  Counter.WellbeingUp();
+				}
+		 if (StudyAnswer == 3){
+			 System.out.println("You go out onto the warm expanse of Cross Campus with the intent to study...But it begins to rain, and you lose all drive to study.");
+			 Counter.WellbeingDown();
+		 }	 
+		}
 }
 
 public void Section(){
