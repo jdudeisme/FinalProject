@@ -1,3 +1,4 @@
+package project;
 
 public class Counter {
 	public static int wellbeing = 0;
@@ -64,6 +65,12 @@ public static void theHungerEffect(){
 	}
 	else if (hunger == 1){
 		wellbeing -= 2;
+	}
+}
+public static void terminationClause(){
+	if (wellbeing < -2){
+		System.out.println("GAME OVER, your wellbeing reached negative 3.");
+		System.exit(0);
 	}
 }
 }
