@@ -1,3 +1,4 @@
+package project;
 
 import java.awt.*;
 
@@ -25,6 +26,7 @@ public class Scene {
 		} else {
 			System.out.println("That was an invalid input");
 		}
+		
 	}
 
 	public static void CS112() {
@@ -222,113 +224,115 @@ public class Scene {
 	}
 	public static void Extracurricular() {
 		System.out.println();
-			public static void Extracurricular() {
-		Scanner console = new Scanner(System.in);
-		System.out.println("You check your phone. It's almost time for your extra-curricular activity. First things first, are you the editor of the YDN? Yes(1) No way(2).");
-		int dailyNews = console.nextInt();
-		if (dailyNews == 1){
-			System.out.println("...");
-			System.out.println("Why?");
-			System.out.println("You spend all day at the office, crawling through first, second, and fifteenth drafts of\n whatever your writers put in front of you before scrapping everything and picking whatever will get you on Overheard.\n You fall asleep atop your coffee at 3am, regretting your life choices.");
-			goodnight();
+		public static void Extracurricular() {
+			Scanner console = new Scanner(System.in);
+			System.out.println("You check your phone. It's almost time for your extra-curricular activity. First things first, are you the editor of the YDN? Yes(1) No way(2).");
+			int dailyNews = console.nextInt();
+			if (dailyNews == 1){
+				System.out.println("...");
+				System.out.println("Why?");
+				System.out.println("You spend all day at the office, crawling through first, second, and fifteenth drafts of\n whatever your writers put in front of you before scrapping everything and picking whatever will get you on Overheard.\n You fall asleep atop your coffee at 3am, regretting your life choices.");
+				goodnight();
+			}
+			else if (dailyNews == 2){
+			System.out.println("Very well, unimportant person, then what do you do in your free time? A capella(1) Dwight Hall(2) IntraMurals(3)");
+			int activity = console.nextInt();
+			if (activity == 1){
+				aCapella();
+				secondExtra(1);
+				}
+				else if (activity == 2){
+				dwight();
+				secondExtra(2);
+				}
+				else if (activity == 3){
+				intra();
+				secondExtra(3);
+				}
+				else{
+				System.out.println("That was an invalid input");  
+				Extracurricular();
+				}
+			}
 		}
-		else if (dailyNews == 2){
-		System.out.println("Very well, unimportant person, then what do you do in your free time? A capella(1) Dwight Hall(2) IntraMurals(3)");
-		int activity = console.nextInt();
-		if (activity == 1){
-			aCapella();
-			secondExtra(1);
-			}
-			else if (activity == 2){
-			dwight();
-			secondExtra(2);
-			}
-			else if (activity == 3){
-			intra();
-			secondExtra(3);
-			}
-			else{
-			System.out.println("That was an invalid input");  
-			Extracurricular();
-			}
-		}
-	}
-	public static void aCapella(){
+		public static void aCapella(){
 
-			int throat = Math.round(Math.random());
-			System.out.println("You join your bestest buddies and sing your heart out during rehearsals!"
-				if (throat == 0){
-					System.out.print("You hit the perfect notes and walk away fine!");
-				}
-				else{
-					System.out.print("You see a cat outside the window and scream in your singing voice.\n Now you have a sore throat!");
-					Counter.WellbeingDown();
-				}
-	}
-	public static void dwight(){
-		System.out.println("As a member of one of the many honorable societies under Dwight Hall, you are helping make the world a better place.");
-		Counter.WellbeingUp;
-	}
-	public static void intra(){
-		System.out.println("Of course you're going to go play an IM, and help your college win everlasting glory (for one semester.) You reach the site of the game and your friend asks you to join them. What do you do? PLAY(1) Cheer from the sidelines(2).");
-				int play = nextInt();
-						   if (play == 1){
-							   System.out.println("You don the colors of your team and charge onto the field, roaring as loud as you can. You give the game your all, but end up messing everything up and making your team lose! You're a CS student, what did you expect?");
-							   Counter.WellbeingDown();
-						   }
-						   else if (play == 2){
-							   System.out.println("You join your friends on the sidelines, where you belong, and cheer your team to victory. The players swear it was your loud cries that pushed them all the way.");
-							   Counter.WellbeingUp();
-						   }
-						   else{
-							 System.out.println("That was an invalid input");  
-							 intra();
-						   }
-	}
-	public static void secondExtra(int beenDone){
-		Scanner console = new Scanner(System.in);
-		if (beenDone == 1){
-			System.out.println("You say goodbye to your posse, and check your phone. Like every yalie, you have another extra curricular planned for the night. What will it be? DwightHall(1) or IMs(2)?");
-			int choice = console.nextInt();
-				if (choice == 1){
-					dwight();
-				}
-				else if (choice == 2){
-					intra();
-				}
-				else{
-					System.out.println("That was an invalid input");  
-					secondExtra(1);
-				}
+				int throat = Math.round(Math.random());
+				System.out.println("You join your bestest buddies and sing your heart out during rehearsals!"
+					if (throat == 0){
+						System.out.print("You hit the perfect notes and walk away fine!");
+					}
+					else{
+						System.out.print("You see a cat outside the window and scream in your singing voice.\n Now you have a sore throat!");
+						Counter.WellbeingDown();
+					}
 		}
-		else if (beenDone == 2){
-			System.out.println("Enough good deeds for one day. Like every yalie, you have another extra curricular planned for the night. What will it be? a Capella(1) or IMs(2)?");
-			int choice = console.nextInt();
-				if (choice == 1){
-					aCapella();
-				}
-				else if (choice == 2){
-					intra();
-				}
-				else{
-					System.out.println("That was an invalid input");  
-					secondExtra(2);
-				}
-		else if (beenDone == 3){
-			System.out.println("Tired from all that physical exertion, you leave your friends and check your phone.\n You still have time for one more activity.\n What will it be? a Capella(1) or DwightHall(2)");
-			int choice = console.nextInt();
-				if (choice == 1){
-					aCapella();
-				}
-				else if (choice == 2){
-					dwight();
-				}
-				else{
-					System.out.println("That was an invalid input");  
-					secondExtra(3);
-				}
+		public static void dwight(){
+			System.out.println("As a member of one of the many honorable societies under Dwight Hall, you are helping make the world a better place.");
+			Counter.WellbeingUp();
 		}
-	}
+		public static void intra(){
+			System.out.println("Of course you're going to go play an IM, and help your college win everlasting glory (for one semester.) You reach the site of the game and your friend asks you to join them. What do you do? PLAY(1) Cheer from the sidelines(2).");
+					
+			int play = console,nextInt();
+							   if (play == 1){
+								   System.out.println("You don the colors of your team and charge onto the field, roaring as loud as you can. You give the game your all, but end up messing everything up and making your team lose! You're a CS student, what did you expect?");
+								   Counter.WellbeingDown();
+							   }
+							   else if (play == 2){
+								   System.out.println("You join your friends on the sidelines, where you belong, and cheer your team to victory. The players swear it was your loud cries that pushed them all the way.");
+								   Counter.WellbeingUp();
+							   }
+							   else{
+								 System.out.println("That was an invalid input");  
+								 intra();
+							   }
+		}
+		public static void secondExtra(int beenDone){
+			Scanner console = new Scanner(System.in);
+			if (beenDone == 1){
+				System.out.println("You say goodbye to your posse, and check your phone. Like every yalie, you have another extra curricular planned for the night. What will it be? DwightHall(1) or IMs(2)?");
+				int choice = console.nextInt();
+					if (choice == 1){
+						dwight();
+					}
+					else if (choice == 2){
+						intra();
+					}
+					else{
+						System.out.println("That was an invalid input");  
+						secondExtra(1);
+					}
+			}
+			else if (beenDone == 2){
+				System.out.println("Enough good deeds for one day. Like every yalie, you have another extra curricular planned for the night. What will it be? a Capella(1) or IMs(2)?");
+				int choice = console.nextInt();
+					if (choice == 1){
+						aCapella();
+					}
+					else if (choice == 2){
+						intra();
+					}
+					else{
+						System.out.println("That was an invalid input");  
+						secondExtra(2);
+					}
+			}
+			else if (beenDone == 3){
+				System.out.println("Tired from all that physical exertion, you leave your friends and check your phone.\n You still have time for one more activity.\n What will it be? a Capella(1) or DwightHall(2)");
+				int choice = console.nextInt();
+					if (choice == 1){
+						aCapella();
+					}
+					else if (choice == 2){
+						dwight();
+					}
+					else{
+						System.out.println("That was an invalid input");  
+						secondExtra(3);
+					}
+			}
+		
 
 	}
 
@@ -398,4 +402,3 @@ public class Scene {
 		}
 	}
 }
-
