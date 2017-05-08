@@ -1,4 +1,3 @@
-package project;
 
 public class Counter {
 	public static int wellbeing = 0;
