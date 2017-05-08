@@ -1,4 +1,3 @@
-package project;
 
 public class Counter {
 	public static int wellbeing = 0;
@@ -33,13 +32,18 @@ public static void HungerDown(){
 	System.out.println("You decided to eat, your hunger level is now " + hunger + ", Mmm Satisfying" );
 }
 
+public static void HungerUp(){
+	hunger++;	
+	System.out.println("Your hunger level is now " + hunger + ", *Stomach Grumbles*");
+}
+
 public static void Wellbeing2Up(){
 	wellbeing += 2;
-	System.out.println("Your well being is currently at " + wellbeing );
+	System.out.println("Awesome move, your well being is currently at " + wellbeing );
 }
  public static void Excom(){
 	 wellbeing = -4;
 	 System.exit(0);
  }
-
+ 
 }
