@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.Scanner;
 public class Scene {
 	public static boolean HasStudied = false;
+	public static double SectionAnswer1;
 public static void Morning(){
 	Scanner console = new Scanner(System.in);
 	
@@ -49,6 +50,7 @@ public static void CS112(){
 		if (FiftyFifty >= .5){
 			System.out.println("Congratulations you little rebel, you've cheated yourself, but more importantly the system.");
 			Counter.Wellbeing2Up();
+			System.out.println("Sneaky Sneaky...");
 		}
 		else{
 			System.out.println("Yea... Not a good idea, you knew the risks and now you pay for it, enjoy Excom! game over.");
@@ -102,20 +104,70 @@ public static void Study(){
 				else{
 					HasStudied = true;
 				}
-		 if (StudyAnswer == 2){
+		}
+		else if (StudyAnswer == 2){
 			  System.out.println("You decide to go to your suite, but you're suitemates are playing 3-player super smash brothers, and you can't help but be their 4th player.");
 			  Counter.WellbeingUp();
 				}
-		 if (StudyAnswer == 3){
+		else if (StudyAnswer == 3){
 			 System.out.println("You go out onto the warm expanse of Cross Campus with the intent to study...But it begins to rain, and you lose all drive to study.");
 			 Counter.WellbeingDown();
 		 }	 
 		}
-}
 
-public void Section(){
+public static void Section(){
+	double SectionAnswer1 = Math.round((Math.random() * 4));
+	double SectionAnswer2 = Math.round((Math.random() * 4));
+	System.out.println("After your \"Productive Study Session\" you decide to go to discussion section for your token humanities credit");
+	Scanner console = new Scanner(System.in);
+	System.out.println("Is there a section A**hole in this discussion(1/0)");	
 	
+	int AHoleAnswer = console.nextInt();
+		if (AHoleAnswer == 1){
+			System.out.println("He really is annoying, but at least he dominates the discussion and you only have to answer one question");
+				System.out.println("If you studied earlier you get the question right automatically, if not pick a number between 0 and 4 and hope you're right");
+				if (HasStudied == true){
+					Counter.WellbeingUp();
+				}
+				int SectionGuess = console.nextInt();
+				if (SectionGuess == SectionAnswer1){
+					System.out.println("Improvising on the spot, not too bad.");
+					Counter.WellbeingUp();
+				}
+				else 
+					System.out.println("Yea good try, but you embaress yourself in front of the entire discussion section");
+					Counter.WellbeingDown();
+		}
+	if (AHoleAnswer == 0){
+		System.out.println("Since you think there is no section A**hole, you must be the culprit yourself!");
+		System.out.println("Now you have to answer two questions because you talk too much, If you studied earlier you get the question right automatically, if not pick two numbers between 0 and 4 and hope you're right" );
+		if (HasStudied == true){
+			Counter.Wellbeing2Up();
+			System.out.println("Too smart for your own good");
+		}
+		else{	
+		int SectionAGuess1 = console.nextInt();
+			if (SectionAGuess1 == SectionAnswer1){
+			System.out.println("Improvising on the spot, not too bad.");
+			Counter.WellbeingUp();			
+		}
+			else{
+					System.out.println("Yea good try, but you embaress yourself in front of the entire discussion section");
+					Counter.WellbeingDown();
+			}
+		int SectionAGuess2 = console.nextInt();
+			if (SectionAGuess2 == SectionAnswer2){
+			System.out.println("Improvising on the spot, not too bad.");
+			Counter.WellbeingUp();
+		}	
+			else{
+				System.out.println("Yea good try, but you embaress yourself in front of the entire discussion section");
+				Counter.WellbeingDown();		
+			}
+		}
+	}
 	
+		
 	
 }
 
