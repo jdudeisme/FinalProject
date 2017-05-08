@@ -1,19 +1,27 @@
-
 import java.util.Scanner;
 
 public class PlayGame {
 	public static void main(String[] args){	
 		Welcome();
 		Scene.Morning();
+		Counter.terminationClause();
 		Scene.CS112();
+		Counter.terminationClause();
 		Scene.Lunch();
+		Counter.terminationClause();
 		Scene.Study();  
+		Counter.terminationClause();
 		Scene.Section();
+		Counter.terminationClause();
 			TimeShift();
 		Scene.Extracurricular();
+		Counter.terminationClause();
 		Scene.Buttery(); 
+		Counter.terminationClause();
 		Scene.Nighttime();
+		Counter.terminationClause();
 		Scene.goodNight();
+			
 	}
 	
 	public static void Welcome(){
