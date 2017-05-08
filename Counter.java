@@ -45,12 +45,13 @@ public static void Wellbeing2Up(){
 	 wellbeing = -4;
 	 System.exit(0);
  }
- public static void showWellbeing();{
+ public static void showWellbeing(){
 	System.out.println("Congratulations! You have an awesome " + wellbeing + "points to show off to your friends!");
 }
- public static int getHunger();{
+ public static int getHunger(){
 	return hunger;
 }
-public static int getWellbeing();{
+public static int getWellbeing(){
 	return wellbeing;
+}
 }
