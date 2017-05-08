@@ -13,6 +13,10 @@ public class PlayGame {
 		Scene.Study();  
 		Scene.Section();
 			TimeShift();
+		Scene.Extracurricular();
+		Scene.Buttery();
+		Scene.Nighttime();
+		Scene.goodNight();
 		
 	
 	}
