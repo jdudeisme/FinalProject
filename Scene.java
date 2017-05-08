@@ -1,3 +1,4 @@
+package project;
 
 import java.awt.*;
 
@@ -252,12 +253,12 @@ public class Scene {
 				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs.\n Of course, there are a few students who are completely chill because they finished the pset the hour it was posted and only came here to laugh at plebs like you.\n One of them points out that pizza was promised at office hours. \nYou could second his request for nourishment(1) or focus on your pset(2). Note that the pizza will be Papa Johns.");
 				int pizzaChoice = console.nextInt();
 				if (pizzaChoice == 1){
-					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns.\n You receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce.\n However, the promise of the great John distracted you from work."
+					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns.\n You receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce.\n However, the promise of the great John distracted you from work.");
 							   Counter.HungerDown();
 							   Counter.WellbeingDown();
 				}
 				else {
-					System.out.println("You bite your lips, resisting the allure of pizza, and let the overly enthusiastic\n pizza-wanting student drown under the combined pressure of the death glares your peers heap on him. \nThat puts you in a happy mood and the gods of computing take pity on you at last,\n fixing your code inexplicably!")
+					System.out.println("You bite your lips, resisting the allure of pizza, and let the overly enthusiastic\n pizza-wanting student drown under the combined pressure of the death glares your peers heap on him. \nThat puts you in a happy mood and the gods of computing take pity on you at last,\n fixing your code inexplicably!");
 						Counter.WellbeingUp();
 				}
 			}
@@ -276,7 +277,7 @@ public class Scene {
 	public static void goodNight() {
 		System.out.println("You walk back, dazed and confused, to your room. You collapse on your bed,\n having made it through a completely ordinary day. Good Night!");
 		if (Counter.getHunger() <= 0){
-			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it \nduring the day. Thus, you have lost the most important battle and will have a terrible night.")
+			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it \nduring the day. Thus, you have lost the most important battle and will have a terrible night.");
 			Counter.WellbeingDown();
 			Counter.WellbeingDown();
 		}
@@ -285,8 +286,8 @@ public class Scene {
 	}
 							   
 	public static void wellbeingDeath(){
-		if (Counter.getWellbeing <= -3){
-		System.out.println("Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.")	
+		if (Counter.getWellbeing() <= -3){
+		System.out.println("Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");	
 		}
 	}
 }
