@@ -1,4 +1,3 @@
-package project;
 
 public class Counter {
 	public static int wellbeing = 0;
@@ -54,5 +53,17 @@ public static void Wellbeing2Up(){
 }
 public static int getWellbeing(){
 	return wellbeing;
+}
+
+public static void theHungerEffect(){
+	if (hunger == 3){
+		wellbeing -= 6;
+	}
+	else if (hunger == 2){
+		wellbeing -= 4;
+	}
+	else if (hunger == 1){
+		wellbeing -= 2;
+	}
 }
 }
