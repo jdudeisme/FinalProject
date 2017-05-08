@@ -1,4 +1,3 @@
-package project;
 
 import java.awt.*;
 
@@ -391,6 +390,7 @@ public class Scene {
 		if (Counter.getHunger() > 0){
 			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it \nduring the day. Thus, you have lost the most important battle and will have a terrible night.");
 			Counter.theHungerEffect();
+			Counter.terminationClause();
 		}
 		wellbeingDeath();
 		Counter.showWellbeing();	
