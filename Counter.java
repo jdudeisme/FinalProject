@@ -1,3 +1,4 @@
+package project;
 
 public class Counter {
 	public static int wellbeing = 0;
@@ -34,7 +35,7 @@ public static void HungerDown(){
 
 public static void Wellbeing2Up(){
 	wellbeing += 2;
-	System.out.println("Your well being is currently at " + wellbeing + ", sneaky sneaky...");
+	System.out.println("Your well being is currently at " + wellbeing );
 }
  public static void Excom(){
 	 wellbeing = -4;
