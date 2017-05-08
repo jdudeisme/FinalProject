@@ -1,3 +1,4 @@
+package project;
 
 public class Counter {
 	public static int wellbeing = 0;
@@ -46,7 +47,7 @@ public static void Wellbeing2Up(){
 	 System.exit(0);
  }
  public static void showWellbeing(){
-	System.out.println("Congratulations! You have an awesome " + wellbeing + "points to show off to your friends!");
+	System.out.println("Congratulations! You have an awesome " + wellbeing + " points to show off to your friends!");
 }
  public static int getHunger(){
 	return hunger;
