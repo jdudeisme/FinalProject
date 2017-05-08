@@ -277,10 +277,9 @@ public class Scene {
 	public static void goodNight() {
 		System.out.println();
 		System.out.println("You walk back, dazed and confused, to your room. You collapse on your bed,\nhaving made it through a completely ordinary day. Good Night!");
-		if (Counter.getHunger() <= 0){
+		if (Counter.getHunger() > 0){
 			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it \nduring the day. Thus, you have lost the most important battle and will have a terrible night.");
-			Counter.WellbeingDown();
-			Counter.WellbeingDown();
+			Counter.theHungerEffect();
 		}
 		wellbeingDeath();
 		Counter.showWellbeing();	
@@ -292,3 +291,4 @@ public class Scene {
 		}
 	}
 }
+
