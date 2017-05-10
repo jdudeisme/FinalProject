@@ -35,20 +35,20 @@ public class Scene {
 		System.out.println(
 				"After a nice start to your day you trek over to Computer Science 112 with Professor Yang Yang.");
 		System.out.println(
-				"You get called on in class! input a number from 0 to 4 to see if you got the question right.");
+				"You get called on in class! Input a number from 0 to 4 to see if you got the question right.");
 		int AnswerCS112 = console.nextInt();
 		if (AnswerCS112 == CorrectAnswer) {
 			System.out.println("You're a hotshot coder and you got the answer right!");
 			Counter.WellbeingUp();
 		} else {
-			System.out.println("You got the answer wrong and embaressed yourself in front of the whole lecture.");
+			System.out.println("You got the answer wrong and embarassed yourself in front of the whole lecture.");
 			Counter.WellbeingDown();
 		}
 
 		System.out.println(
 				"As you leave class, and are going up the sketchy staircase, a shadowy voice offers you their code for the current pset, \ndo you take it?");
 		System.out.println(
-				"You think to yourself that there is a 50% chance you get ex-commed for cheating, \nand a 50% chance you finish the PSET, and relieve youself of stress awarding you 2 wellbeing points.");
+				"You think to yourself that there is a 50% chance you get Ex-Commed for cheating, \nand a 50% chance you finish the PSET, and relieve youself of stress awarding you 2 wellbeing points.");
 		System.out.println("Cheat or No? (1/0)");
 
 		int AnswerCheat = console.nextInt();
@@ -61,7 +61,7 @@ public class Scene {
 				System.out.println("Sneaky Sneaky...");
 			} else {
 				System.out.println(
-						"Yea... Not a good idea, you knew the risks and now you pay for it, enjoy Excom! game over.");
+						"Yeah... Not a good idea, you knew the risks and now you pay for it, enjoy Excom! Game Over.");
 				Counter.Excom();
 			}
 		} else {
@@ -80,7 +80,7 @@ public class Scene {
 
 		if (LunchAnswer == 1) {
 			System.out.println(
-					"You head to commons and go to town on the stir fry fried rice with a little touch of sriracha on top, \nthere's nothing like it and it makes you very happy.");
+					"You head to Commons and go to town on the stir fry fried rice with a little touch of sriracha on top, \nthere's nothing like it and it makes you very happy.");
 			Counter.WellbeingUp();
 			Counter.HungerDown();
 		} else if (LunchAnswer == 2) {
@@ -111,7 +111,7 @@ public class Scene {
 			System.out.println("A trip to the good-old-fashioned library");
 			if (HasStudied == true) {
 				System.out.println(
-						"Nerd! you study so often, but you know it's good for you. \nYou feel even less anxious about your classes.");
+						"Nerd! You study so often, but you know it's good for you. \nYou feel even less anxious about your classes.");
 				Counter.WellbeingUp();
 			} else {
 				HasStudied = true;
@@ -125,6 +125,7 @@ public class Scene {
 					"You go out onto the warm expanse of Cross Campus with the intent to study... \nBut it begins to rain, and you lose all drive to study.");
 			Counter.WellbeingDown();
 		}
+
 	}
 
 	public static void Section() {
@@ -145,15 +146,15 @@ public class Scene {
 			if (HasStudied == true) {
 				System.out.println("You got it right!");
 				Counter.WellbeingUp();
-			}
-			int SectionGuess = console.nextInt();
-			if (SectionGuess == SectionAnswer1) {
-				System.out.println("Improvising on the spot, not too bad.");
-				Counter.WellbeingUp();
-			} 
-		else{
+			} else {
+				int SectionGuess = console.nextInt();
+				if (SectionGuess == SectionAnswer1) {
+					System.out.println("Improvising on the spot, not too bad.");
+					Counter.WellbeingUp();
+				} else {
 				System.out.println("Yea good try, but you embaress yourself in front of the entire discussion section.");
-			Counter.WellbeingDown();
+				Counter.WellbeingDown();
+			}
 		}
 		}
 		if (AHoleAnswer == 0) {
@@ -188,14 +189,14 @@ public class Scene {
 	
 	public static void Dinner() {
 		System.out.println();
-		System.out.println("Now you're off to dinner in your residential colleges dining hall");
+		System.out.println("Now you're off to dinner in your Residential College's dining hall");
 			if (DinnerSecond == 0){
 			System.out.println("Going to dinner after a bout of procrastination allows you to time your hunger perfectly, \nbut all that is left is cape shark, and you hate cape shark!");
 			Counter.WellbeingDown();
 			Counter.HungerDown();
 		}
 		else{
-			System.out.println("Going to dinner so early is a bold move, you see your best friends there but you know you will be hungry later, \nyou leave happy but your stomach is dissatisfied");
+			System.out.println("Going to dinner so early is a bold move. You see your best friends there but you know you will be hungry later, \nso you leave happy but your stomach is dissatisfied");
 			Counter.WellbeingUp();	
 		}
 	}
@@ -213,13 +214,13 @@ public class Scene {
 			else if (ProcrastinateAns == 2){
 				System.out.println("You troll around for a couple hours and you finally stumble upon the meme of a lifetime");
 				Counter.WellbeingUp();
-				// cue Std.Draw Dope ass meme??????
+				StdDraw.picture(50.0, 50.0, "meme.jpg");
 			}
 			else {
 				System.out.println("You take a run and feel that nice runners afterglow and feel confident about your health, \nbut it makes you even more hungry than you usually are");
 				Counter.Wellbeing2Up();
 				Counter.HungerUp();	
-			}	
+			}
 	}
 	
 		public static void Extracurricular() {
@@ -231,6 +232,8 @@ public class Scene {
 				System.out.println("Why?");
 				System.out.println("You spend all day at the office, crawling through first, second, and fifteenth drafts of\n whatever your writers put in front of you before scrapping everything and picking whatever will get you on Overheard.\n You fall asleep atop your coffee at 3am, regretting your life choices.");
 				goodNight();
+				System.exit(0);
+
 			}
 			else if (dailyNews == 2){
 			System.out.println("Very well, unimportant person, then what do you do in your free time? A capella(1) Dwight Hall(2) IntraMurals(3)");
@@ -354,14 +357,14 @@ public class Scene {
 
 
 	public static void Nighttime() {
-		System.out.println("The night air is chilly yet alive with the warmth of bustling bodies and alcohol.\n But you know you shouldn't go out tonight. Your unfinished pset fills you with guilt. \nDo you go to office hours(1) or bite the bullet and go to WOADS(2)?");
+		System.out.println("The night air is chilly yet alive with the warmth of bustling bodies and alcohol.\nBut you know you shouldn't go out tonight. Your unfinished pset fills you with guilt. \nDo you go to office hours(1) or bite the bullet and go to WOADS(2)?");
 		Scanner console = new Scanner(System.in);
 		int ProcrastinateAns = console.nextInt();
 			if (ProcrastinateAns == 1){
-				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs.\n Of course, there are a few students who are completely chill because they finished the pset the hour it was posted, \nthey only came here to laugh at plebs like you.\nOne of them points out that pizza was promised at office hours. \nYou could second his request for nourishment(1) or focus on your pset(2). Note that the pizza will be Papa Johns.");
+				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs.\nOf course, there are a few students who are completely chill because they finished the pset the hour it was posted, \nthey only came here to laugh at plebs like you.\nOne of them points out that pizza was promised at office hours. \nYou could second his request for nourishment(1) or focus on your pset(2). Note that the pizza will be Papa Johns.");
 				int pizzaChoice = console.nextInt();
 				if (pizzaChoice == 1){
-					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns.\n You receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce.\n However, the promise of the great John distracted you from work.\n");
+					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns.\nYou receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce.\n However, the promise of the great John distracted you from work.\n");
 							   Counter.HungerDown();
 							   Counter.WellbeingDown();
 				}
@@ -387,7 +390,7 @@ public class Scene {
 		System.out.println();
 		System.out.println("You walk back, dazed and confused, to your room. You collapse on your bed,\nhaving made it through a completely ordinary day. Good Night!");
 		if (Counter.getHunger() > 0){
-			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it \nduring the day. Thus, you have lost the most important battle and will have a terrible night.");
+			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it during the day. \nThus, you have lost the most important battle and will have a terrible night.");
 			Counter.theHungerEffect();
 			Counter.terminationClause();
 		}
@@ -395,9 +398,21 @@ public class Scene {
 		Counter.showWellbeing();	
 	}
 							   
-	public static void wellbeingDeath(){
-		if (Counter.getWellbeing() <= -3){
-		System.out.println("Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");	
+
+	public static void wellbeingDeath() {
+		if (Counter.getWellbeing() <= -3) {
+			System.out.println(
+					"Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");
+			StdAudio.play("deathsong_harvard.wav");
+			System.out.println("Do you want to play again? 1/0");
+			Scanner console = new Scanner(System.in);
+			int playAgain = console.nextInt();
+			if (playAgain == 1) {
+				PlayGame.main(null);
+			} else {
+				System.exit(0);
+			}
 		}
 	}
+}
 }
