@@ -1,5 +1,3 @@
-package project;
-
 import java.awt.*;
 
 import java.util.Scanner;
@@ -25,7 +23,6 @@ public class Scene {
 			Counter.HungerDown();
 		} else {
 			System.out.println("That was an invalid input");
-			Morning();
 		}
 		
 	}
@@ -97,13 +94,9 @@ public class Scene {
 			if (ResColAnswer == 1) {
 				Counter.HungerDown();
 				Counter.WellbeingDown();
-			} else if (ResColAnswer == 2) {
+			} else {
 				System.out.println("Not eating is a pretty bold move");
 			}
-			else {
-			System.out.println("That was an invalid input");
-			Lunch();
-		}
 		}
 	}
 
@@ -130,10 +123,6 @@ public class Scene {
 			System.out.println(
 					"You go out onto the warm expanse of Cross Campus with the intent to study... \nBut it begins to rain, and you lose all drive to study.");
 			Counter.WellbeingDown();
-		}
-		else {
-			System.out.println("That was an invalid input");
-			Study();
 		}
 
 	}
@@ -205,13 +194,9 @@ public class Scene {
 			Counter.WellbeingDown();
 			Counter.HungerDown();
 		}
-		else if (DinnerSecond == 1){
+		else{
 			System.out.println("Going to dinner so early is a bold move. You see your best friends there but you know you will be hungry later, \nso you leave happy but your stomach is dissatisfied");
 			Counter.WellbeingUp();	
-		}
-		else {
-			System.out.println("That was an invalid input");
-			Dinner();
 		}
 	}
 
@@ -228,16 +213,12 @@ public class Scene {
 			else if (ProcrastinateAns == 2){
 				System.out.println("You troll around for a couple hours and you finally stumble upon the meme of a lifetime");
 				Counter.WellbeingUp();
-				StdDraw.picture(50.0, 50.0, "meme.jpg");
+			//	StdDraw.picture(50.0, 50.0, "meme.jpg");
 			}
-			else if (ProcrastinateAns == 3){
+			else {
 				System.out.println("You take a run and feel that nice runners afterglow and feel confident about your health, \nbut it makes you even more hungry than you usually are");
 				Counter.Wellbeing2Up();
 				Counter.HungerUp();	
-			}
-			else {
-				System.out.println("That was an invalid input");
-				Procrastinate();
 			}
 	}
 	
@@ -276,15 +257,15 @@ public class Scene {
 		}
 		public static void aCapella(){
 
-			int throat = (int) Math.round((Math.random()));
-			System.out.println("You join your bestest buddies and sing your heart out during rehearsals!");
-				if (throat == 0){
-					System.out.print("You hit the perfect notes and walk away fine!");
-				}
-				else{
-					System.out.print("You see a cat outside the window and scream in your singing voice.\n Now you have a sore throat!");
-					Counter.WellbeingDown();
-				}
+				int throat = (int) Math.round((Math.random()));
+				System.out.println("You join your bestest buddies and sing your heart out during rehearsals!");
+					if (throat == 0){
+						System.out.print("You hit the perfect notes and walk away fine!");
+					}
+					else{
+						System.out.print("You see a cat outside the window and scream in your singing voice.\n Now you have a sore throat!");
+						Counter.WellbeingDown();
+					}
 		}
 		public static void dwight(){
 			System.out.println("As a member of one of the many honorable societies under Dwight Hall, \nyou are helping make the world a better place.");
@@ -413,30 +394,28 @@ public class Scene {
 			Counter.terminationClause();
 		}
 		wellbeingDeath();
-		Counter.showWellbeing();
-		System.out.println("Do you want to play again? 1/0");
-		Scanner console = new Scanner(System.in);
-		int playAgain = console.nextInt();
-			if (playAgain == 1){
-				PlayGame.main(null);
-			}
-			else{
-				System.exit(0);
-			}
+		Counter.showWellbeing();	
 	}
 							   
-	public static void wellbeingDeath(){
-		if (Counter.getWellbeing() <= -3){
-		System.out.println("Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");	
-		StdAudio.play("deathsong_harvard.wav");
-		System.out.println("Do you want to play again? 1/0");
-		Scanner console = new Scanner(System.in);
-		int playAgain = console.nextInt();
-			if (playAgain == 1){
+
+	public static void wellbeingDeath() {
+		if (Counter.getWellbeing() <= -3) {
+			System.out.println(
+					"Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");
+		//2	StdAudio.play("deathsong_harvard.wav");
+			System.out.println("Do you want to play again? 1/0");
+			Scanner console = new Scanner(System.in);
+			int playAgain = console.nextInt();
+			if (playAgain == 1) {
+				Counter.hunger = 0;
+				Counter.wellbeing = 3;
 				PlayGame.main(null);
-			}
-			else{
+			} else {
 				System.exit(0);
 			}
+			console.close();
+		}
 	}
+}
+
 }
