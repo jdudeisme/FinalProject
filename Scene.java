@@ -408,6 +408,8 @@ public class Scene {
 			Scanner console = new Scanner(System.in);
 			int playAgain = console.nextInt();
 			if (playAgain == 1) {
+				Counter.hunger = 0;
+				Counter.wellbeing = 3;
 				PlayGame.main(null);
 			} else {
 				System.exit(0);
